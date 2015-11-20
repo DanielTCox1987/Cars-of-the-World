@@ -34,6 +34,7 @@ var CarFactory = (function () {
                     html += this.make + " ";
                     html += this.model + " ";
                     html += this.year + " ";
+                    html += this.country + " ";
                     html += "</li>";
                     return html;
                 }
@@ -48,6 +49,9 @@ var CarFactory = (function () {
             }
             if (specs.year && typeof specs.year === "number") {
                 car.year = specs.year;
+            }
+            if (specs.country && typeof specs.country === "string") {
+            car.country = specs.country;
             }
 
             return car;
@@ -131,6 +135,7 @@ var makeCars = function () {
     cars.add(factory.buildAllYears({
         make: "Jeep",
         model: "Cherokee"
+        country "United States"
     }, 1984, 2001));
 };
 
