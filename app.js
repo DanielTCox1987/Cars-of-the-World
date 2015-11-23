@@ -95,8 +95,9 @@ var CarManufacturer = (function () {
 
     Manufacturer.prototype = {
         // need a factory... or two? just one is fine for now.
-        init: function() {
+        init: function(name) {
             this.factory = new CarFactory();
+            this.name = name;
             // return this;
         },
 
