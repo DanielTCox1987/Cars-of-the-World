@@ -85,6 +85,32 @@ var CarFactory = (function () {
     return Factory;
 }()); //IIFE - immediately invoked function expression
 
+var CarManufacturer = (function () {
+    /**
+     * Creates an instance of the Manufacturer class
+     * @constructor
+     * @returns {Manufacturer} A car Manufacturer
+     */
+    var Manufacturer = function() {};
+
+    Manufacturer.prototype = {
+        // need a factory... or two? just one is fine for now.
+        init: function() {
+            this.factory = new CarFactory();
+            // return this;
+        },
+
+        // build models
+        build: function() {
+
+        }
+    };
+
+    return Manufacturer;
+}());
+
+var CarModel = null;
+
 var cars = {
     store: [],
 
@@ -156,3 +182,6 @@ $(document).ready(function () {
     var $rootElement = $("body");
     init($rootElement);
 });
+
+// displaying specific cars
+//
