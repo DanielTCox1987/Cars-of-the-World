@@ -110,7 +110,20 @@ var CarManufacturer = (function () {
     return Manufacturer;
 }());
 
-var CarModel = null;
+var CarModel = (function ()  {
+
+  var Model = function() {};
+
+  Model.prototype = {
+
+    init: function(name) {
+      this.factory = new CarFactory();
+      this.name = name;
+
+    }
+  }
+
+})
 
 var cars = {
     store: [],
