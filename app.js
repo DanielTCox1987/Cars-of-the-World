@@ -120,7 +120,12 @@ var CarModel = (function ()  {
       this.factory = new CarFactory();
       this.name = name;
 
+    },
+
+    build:function() {
+      
     }
+
   }
 
 })
